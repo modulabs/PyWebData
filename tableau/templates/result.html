@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>결과</title>
+    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+</head>
+    <script type="text/javascript">
+function aisiexit() {
+    document.getElementById("Loading").style.display = "none";
+}
+</script>
+    <script type="text/javascript">
+function result() {
+$("#resultpersonality").append("<center><font color='black'> <font size='3'>당신의 색상은 <font size='5'>{{ rcolor }}</font>입니다.<br> <br>{{ personality }}</font></font></center>")
+}
+</script>
+    <script type="text/javascript">
+function url() {
+location.href="http://localhost:8000/";
+}
+</script>
+<script type="text/javascript">
+setTimeout("aisiexit()",6000);//1000당 1초
+setTimeout("result()",7000);//1000당 1초
+setTimeout("url()",60000);
+</script>
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+<body>
+<div id="Loading" style="position:absolute; top:20%; left:0; width:100%; text-align:center; margin:0 auto;">
+
+  <center>데이터를 분석중입니다.</center><br>
+<center><div class="loader"></div></center>
+    <center><img src="{{ static }}"></center>
+</table>
+</div>
+<div id="resultpersonality"></div>
+<body bgcolor="#7fffd4"></body>
+<div class="url"></div>
+</body>
+</html>
+
+
+
+
